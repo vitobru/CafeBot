@@ -21,6 +21,11 @@ public class Main {
             System.exit(1);
         }
 
+        String version = "0.1.0";
+
+        System.out.println("CafeBot v"+version);
+        System.out.println("Created by lillie#1072");
+
         DiscordApiBuilder apiBuilder = new DiscordApiBuilder();
 
         // Token
@@ -37,6 +42,7 @@ public class Main {
         DiscordApi api = apiBuilder
                 .setWaitForServersOnStartup(false)
                 .login().join();
+        System.out.println("Bot has connected to Discord.");
 
         // Listeners (Cogs)
         api.addListener(new Ping());
